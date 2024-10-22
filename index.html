@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EL TAROT DE TIM</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QLv2NVzWj5TqP6S9oV8bhFepVppgXAh1OgV5+7ZqNp/C3FNE5LrWY5BIc/Wfu1Bo" crossorigin="anonymous">
+
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Fondo */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0b3d3d 0%, #1c1c1b 50%, #3a4d3a 100%);
+            color: #DAA520;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos de la barra de navegación */
+        .navbar-custom {
+            background-color: #0b3d3d;
+        }
+        .navbar-custom .nav-link {
+            color: #DAA520;
+            font-weight: bold;
+        }
+        .navbar-custom .nav-link:hover {
+            color: #fff;
+        }
+
+        /* Botones de cada sección */
+        button {
+            background-color: #DAA520;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0b3d3d;
+            color: #DAA520;
+        }
+
+        /* Estilos de cada sección */
+        section {
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">EL TAROT DE TIM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#cartas">Sacar Cartas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#fase-lunar">Fase Lunar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#preguntas">Preguntas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#carta-astral">Carta Astral</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Sacar Cartas -->
+    <section id="cartas" class="container">
+        <h2>Sacar Cartas</h2>
+        <div class="cartas-container d-flex justify-content-center">
+            <div class="carta m-2" id="carta1"></div>
+            <div class="carta m-2" id="carta2"></div>
+            <div class="carta m-2" id="carta3"></div>
+        </div>
+        <button onclick="sacarCartas()">Sacar Cartas</button>
+    </section>
+
+    <!-- Sección de Fase Lunar -->
+    <section id="fase-lunar" class="container">
+        <h2>Fase Lunar</h2>
+        <button onclick="calcularFaseLunar()">Mostrar Fase Lunar</button>
+        <p id="fase-lunar-resultado"></p>
+    </section>
+
+    <!-- Sección de Preguntas -->
+    <section id="preguntas" class="container">
+        <h2>Preguntas</h2>
+        <textarea class="form-control" placeholder="Escribe tus preguntas aquí..."></textarea>
+    </section>
+
+    <!-- Sección de Carta Astral -->
+    <section id="carta-astral" class="container">
+        <h2>Carta Astral</h2>
+        <button>Generar Carta Astral</button>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="container">
+        <h2>Contacto</h2>
+        <p>Correo: contacto@ejemplo.com</p>
+        <p>Teléfono: <a href="tel:+1234567890">+1234567890</a></p>
+    </section>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 EL TAROT DE TIM. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts personalizados -->
+    <script>
+        function sacarCartas() {
+            alert("Cartas sacadas");
+        }
+
+        function calcularFaseLunar() {
+            document.getElementById("fase-lunar-resultado").innerText = "Luna Nueva";
+        }
+    </script>
+</body>
+</html>
